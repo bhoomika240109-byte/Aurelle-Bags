@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | AURELLE</title>
+
+    <link rel="stylesheet" href="buynow.css">
+</head>
+<body>
+
+<div class="checkout-page">
+
+    <!-- Header -->
+    <header class="checkout-header">
+        <a href="shop.html" class="back-link">← Continue Shopping</a>
+        <a href="shop.html" class="logo">AURELLE</a>
+        <span class="secure-label">CHECKOUT</span>
+    </header>
+
+    <main class="checkout-container">
+
+        <div class="checkout-heading">
+            <p class="eyebrow">ALMOST YOURS</p>
+            <h1>Checkout</h1>
+            <p>Complete your details to prepare your order.</p>
+        </div>
+
+        <form class="checkout-form">
+
+            <!-- Contact Information -->
+            <section class="checkout-section">
+                <h2>01. Contact Information</h2>
+
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name"
+                        placeholder="Enter your full name"
+                        autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address (Optional)</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email">
+                </div>
+            </section>
+
+            <!-- Delivery Address -->
+            <section class="checkout-section">
+                <h2>02. Delivery Address</h2>
+
+                <div class="form-group">
+                    <label for="address">House No. / Flat / Building</label>
+                    <input type="text" id="address" name="address"
+                        placeholder="House number and building"
+                        autocomplete="address-line1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="street">Street / Area / Locality</label>
+                    <input type="text" id="street" name="street"
+                        placeholder="Street or locality"
+                        autocomplete="address-line2" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city"
+                            placeholder="City"
+                            autocomplete="address-level2" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state"
+                            placeholder="State"
+                            autocomplete="address-level1" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pincode">PIN Code</label>
+                    <input type="text" id="pincode" name="pincode"
+                        inputmode="numeric" maxlength="6"
+                        pattern="[0-9]{6}"
+                        placeholder="6-digit PIN code"
+                        autocomplete="postal-code" required>
+                </div>
+            </section>
+
+            <!-- Payment -->
+            <section class="checkout-section">
+                <h2>03. Payment Method</h2>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="cod" required>
+                    <span class="payment-icon">₹</span>
+                    <span class="payment-text">
+                        <strong>Cash on Delivery</strong>
+                        <small>Pay when your order arrives.</small>
+                    </span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="upi">
+                    <span class="payment-icon">↗</span>
+                    <span class="payment-text">
+                        <strong>UPI Payment</strong>
+                        <small>Google Pay, PhonePe, Paytm and more.</small>
+                    </span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="card">
+                    <span class="payment-icon">▤</span>
+                    <span class="payment-text">
+                        <strong>Credit / Debit Card</strong>
+                        <small>Visa, Mastercard and other supported cards.</small>
+                    </span>
+                </label>
+
+                <p class="payment-note">
+                    Online payments will be available after a secure
+                    payment gateway is connected.
+                </p>
+            </section>
+
+            <!-- Order Summary -->
+            <section class="checkout-section order-summary">
+                <h2>04. Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>White Creme Shoulder Bag</span>
+                    <span>₹2,499</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span>Calculated later</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Subtotal</span>
+                    <span>₹2,499</span>
+                </div>
+
+                <p class="summary-note">
+                    This is a sample order summary. Your actual order total
+                    may differ.
+                </p>
+
+                <!-- Link to order confirmation page -->
+                <a href="order.html" class="place-order">
+                    PLACE ORDER — ₹2,499
+                </a>
+
+                <p class="terms-note">
+                    By placing your order, you agree to our store policies.
+                </p>
+            </section>
+
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="checkout-footer">
+        <p>AURELLE</p>
+        <span>TIMELESS STYLE. EVERYDAY ELEGANCE.</span>
+    </footer>
+
+</div>
+
+</body>
+</html>

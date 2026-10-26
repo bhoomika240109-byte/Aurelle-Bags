@@ -1,0 +1,1841 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: #f8f7f3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Navigation bar */
+
+.navbar{
+
+    height: 50px;
+    width: 100%;
+    background-color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    
+}
+
+/* Aurelle logo*/
+
+.logo{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: normal;
+
+    color: #222;
+    letter-spacing: -2px;
+
+
+
+}
+
+/* Navigation Links*/
+
+nav{
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+
+
+}
+
+nav a {
+
+    position: relative;
+
+    text-decoration: none;
+    color: #171717;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: normal;
+
+    padding: 10px 0;
+}
+
+/* Hover effect*/
+
+nav a:hover{
+
+    color: #555555;
+}
+
+/* Underline for active page*/
+
+nav a:active::after{
+
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #555555;
+}
+
+/* Main container*/
+
+.hero{
+
+    width: 90%;
+    max-width: 1160px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    background-color: #faf9f6;
+
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+
+}
+
+/* Left section*/
+
+.left-section{
+
+    width: 50%;
+
+    padding-top: 80px;
+    padding-left: 95px;
+
+    position: relative;
+}
+
+/*Aurelle heading*/
+
+.left-section h1{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 76px;
+    font-weight: normal;
+
+    color: #111;
+
+    line-height: 1;
+}
+
+/* Small description*/
+
+.subtitle{
+
+    margin-top: 28px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 23px;
+    font-weight: normal;
+
+    color: #888;
+
+    letter-spacing: 0.2px;
+}
+
+/* Small image*/
+
+.small-image{
+
+    width: 325px;
+    height: 285px;
+
+    margin-top: 115px;
+}
+
+/* Small image itself*/
+
+.small-image img{
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    
+}
+
+/* Right section*/
+
+.right-section{
+
+    width: 50%;
+}
+
+/* Main image*/
+
+.main-image{
+
+    width: 100%;
+    height: 620px;
+
+    margin: 0;
+}
+
+/* Main image itself*/
+
+.main-image img{
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-top: 30px;
+
+    
+}
+
+/* BESTSELLERS SECTION */
+
+.bestsellers{
+
+    width: 100%;
+
+    padding: 95px 75px 70px;
+
+    background-color: #faf9f6;
+}
+
+/* Heading + see all*/
+
+.bestsellers-header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+/* Bestsellears heading*/
+.bestsellers-header h2{
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-weight: normal;
+
+    color: #111;
+
+    margin: 0;
+}
+
+/* See all link */
+
+.see-all{
+
+    color: #777;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #999;
+
+    padding-bottom: 3px;
+}
+
+/* See all hover */
+
+.see-all:hover{
+
+    color: #111;
+
+    border-color: #111;
+}
+
+/* PRODUCT LIST*/
+
+.product-list{
+
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual product*/
+
+.product{
+
+    width: 100%;
+
+}
+
+/* Product image box */
+
+.product-image{
+
+    width: 100%;
+    height: 215px;
+
+    margin: 0;
+
+    background-color: #f1eee7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+/* Product image*/
+
+.product-image img{
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* Product information*/
+
+.product-info{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 12px;
+}
+
+/* Product name*/
+
+.product-name{
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+
+    color: #666;
+
+    letter-spacing: 0.3px;
+}
+
+/* Product price */
+
+.price{
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+
+    color: #777;
+}
+
+/* Bold price*/
+
+.price strong{
+
+    font-weight: normal;
+}
+
+/* BOTTOM LINE*/
+
+.bestsellers::after{
+
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #777;
+
+    margin-top: 25px;
+}
+
+/* RESPONSIVE DESING*/
+
+@media (max-width:900px){
+
+    .bestsellers{
+
+        padding: 70px 40px 50px;
+    }
+
+    .product-list{
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+
+    .bestsellers{
+
+        padding: 50px 25px 40px;
+    }
+
+    .bestsellers-header h2{
+
+        font-size: 35px;
+    }
+
+    .product-list{
+
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FOOTER */
+
+.footer{
+
+    width: 100%;
+
+    background-color: #211f1b;
+
+    color: #f5f2eb;
+
+    text-align: center;
+
+    padding: 35px 20px 40px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Aurelle logo */
+
+.footer h2{
+
+    margin: 0 0 25px;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    letter-spacing: 0.5px;
+}
+
+/* Copyright */
+
+.footer p{
+
+    margin: 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #44413c;
+
+    display: inline-block;
+
+    min-width: 430px;
+
+    font-size: 15px;
+
+    color: #ddd8cf;
+}
+
+/* OUR STORY SECTION */
+
+.story{
+
+    width: 100%;
+
+    min-height: 585px;
+
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+
+    background-color: #faf9f6;
+}
+
+/* Left side */
+
+.story-content{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+/* ABOUT US small heading */
+
+.small-heading{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #666666;
+
+    margin-bottom: 12px;
+}
+
+/* Our story heading */
+
+.story-content h1{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-size: 72px;
+    font-weight: normal;
+    line-height: 1.05;
+
+    margin-bottom: 38px;
+
+    color: #111111;
+}
+
+/* Story paragraph */
+
+.story-text{
+
+    max-width: 440px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+
+    line-height: 1.65;
+
+    color: #555555;
+}
+
+/* STORY IMAGE */
+
+.story-image{
+
+    width: 100%;
+    height: 530px;
+
+    margin: 0;
+
+    overflow: hidden;
+}
+
+.story-image img{
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+/* OUR VALUES SECTION */
+
+.values{
+
+    width: 100%;
+
+    min-height: 570px;
+
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+
+    align-items: center;
+
+    padding: 80px 90px;
+
+    gap: 80px;
+
+    background-color: #faf9f6;
+
+}
+
+/* Values image */
+
+.values-image{
+
+    width: 100%;
+    height: 430px;
+
+    margin: 0;
+
+    overflow: hidden;
+}
+
+.values-image img{
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+/* VALUES TEXT */
+
+
+.values-content{
+
+    padding-left: 0;
+
+    max-width: 470px;
+}
+
+/* Our Values heading */
+
+.values-content h2{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-size: 50px;
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    margin-bottom: 32px;
+
+    color: #111111;
+
+}
+
+/* Values paragraph */
+
+.values-content p{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-size: 20px;
+
+    line-height: 1.65;
+
+    color: #555555;
+
+    margin-bottom: 35px;
+}
+
+/* Small line below paragraph */
+
+.values-content hr{
+
+    width: 45px;
+    height: 2px;
+
+    border: none;
+
+    background-color: #777777;
+
+    margin: 0;
+}
+
+/* RESPONSIVE DESING */
+
+@media (max-width:900px){
+
+    .story{
+
+        grid-template-columns: 1fr;
+    }
+
+    .story-content{
+
+        padding: 70px 50px;
+    }
+
+    .story-image{
+
+        height: 500px;
+    }
+
+    .values{
+
+        grid-template-columns: 1fr;
+
+        padding: 60px 50px;
+
+        gap: 50px;
+    }
+
+    .values-image{
+
+        height: 450px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .story-content{
+
+        padding: 60px 25px;
+    }
+
+    .story-content h1{
+
+        font-size: 52px;
+    }
+
+    .story-text{
+
+        font-size: 18px;
+    }
+
+    .story-image{
+
+        height: 400px;
+    }
+
+    .values{
+
+        padding: 50px 25px;
+    }
+
+    .values-content h2{
+
+        font-size: 42px;
+    }
+
+    .values-content p{
+
+        font-size: 18px;
+    }
+
+    .values-image{
+
+        height: 350px;
+    }
+}
+
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+.contact-section {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    padding: 80px 90px 100px;
+    gap: 90px;
+
+    background-color: #faf9f6;
+}
+
+
+/* =========================================
+   LEFT SIDE
+   ========================================= */
+
+.contact-info {
+    padding-top: 55px;
+}
+
+
+/* Small heading */
+
+.small-heading {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+    letter-spacing: 4px;
+
+    color: #666666;
+
+    margin-bottom: 15px;
+}
+
+
+/* Contact Us heading */
+
+.contact-info h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 72px;
+    font-weight: normal;
+
+    line-height: 1.05;
+
+    color: #111111;
+
+    margin-bottom: 35px;
+}
+
+
+/* Introduction text */
+
+.intro {
+    max-width: 460px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+    line-height: 1.65;
+
+    color: #555555;
+
+    margin-bottom: 45px;
+}
+
+
+/* Contact details */
+
+address {
+    font-style: normal;
+}
+
+
+address p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    color: #555555;
+
+    margin-bottom: 25px;
+}
+
+
+address strong {
+    font-weight: normal;
+    color: #111111;
+}
+
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+
+.contact-form-section {
+    padding-top: 45px;
+}
+
+
+form {
+    width: 100%;
+    max-width: 520px;
+}
+
+
+/* Each form field */
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+
+/* Labels */
+
+label {
+    display: block;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    color: #555555;
+
+    margin-bottom: 10px;
+}
+
+
+/* Input and textarea */
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 14px 5px;
+
+    border: none;
+    border-bottom: 1px solid #999999;
+
+    background-color: transparent;
+
+    outline: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    color: #222222;
+}
+
+
+/* Message box */
+
+textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+
+/* Placeholder */
+
+input::placeholder,
+textarea::placeholder {
+    color: #999999;
+}
+
+
+/* When user clicks inside */
+
+input:focus,
+textarea:focus {
+    border-bottom: 1px solid #222222;
+}
+
+
+/* =========================================
+   SEND BUTTON
+   ========================================= */
+
+button {
+    margin-top: 10px;
+
+    padding: 15px 30px;
+
+    border: 1px solid #222222;
+
+    background-color: #222222;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: transparent;
+    color: #222222;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .contact-section {
+        grid-template-columns: 1fr;
+
+        padding: 60px 50px 80px;
+
+        gap: 40px;
+    }
+
+    .contact-info {
+        padding-top: 20px;
+    }
+
+    .contact-form-section {
+        padding-top: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 50px 25px;
+    }
+
+    .contact-info h1 {
+        font-size: 52px;
+    }
+
+    .intro {
+        font-size: 18px;
+    }
+}
+
+/* =========================================================
+   AURELLE SHOP PAGE
+   ========================================================= */
+
+
+/* RESET ONLY FOR SHOP */
+
+.shop-page,
+.shop-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SHOP PAGE
+   ========================================================= */
+
+.shop-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #f8f6f2;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   SHOP TOP
+   ========================================================= */
+
+.shop-top {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px 40px;
+
+    background: #ffffff;
+}
+
+
+/* Back button */
+
+.back-button {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #222222;
+    color: #ffffff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* Search */
+
+.search-box {
+    height: 48px;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+
+    background: #ffffff;
+}
+
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 16px;
+}
+
+
+.camera-icon {
+    font-size: 20px;
+
+    margin-left: 10px;
+}
+
+.cartshop-link{
+
+    text-decoration: none;
+    
+
+    
+     
+}
+
+
+
+/* =========================================================PRODUCT GRID ========================================================= */
+
+/*THIS IS WHAT GIVES YOU 4 BAGS IN ONE ROW.*/
+
+.shop-product-grid {
+    
+    width: 100%;
+    display: grid !important;
+
+    grid-template-columns: repeat(4,minmax(0,1fr)) !important;
+
+    gap: 20px;
+
+    padding: 25px 40px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================PRODUCT CARD========================================================= */
+
+.shop-product-card {
+    width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+.shop-product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.shop-image-box {
+    position: relative;
+
+    width: 100%;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background: #f4f1ec;
+}
+
+
+.shop-image-box img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================================================
+   BAG BUTTON
+   ========================================================= */
+
+.bag-button {
+    position: absolute;
+
+    right: 12px;
+    bottom: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #222222;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+   ========================================================= */
+
+.shop-product-info {
+    width: 100%;
+
+    padding: 15px;
+}
+
+
+/* Product name and heart */
+
+.shop-name-row {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+.shop-name-row h3 {
+    margin: 0;
+
+    flex: 1;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    color: #222222;
+}
+
+
+.heart-button {
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 0;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.shop-price {
+    margin: 10px 0 0;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: #222222;
+}
+
+
+/* =========================================================
+   COLOR OPTIONS
+   ========================================================= */
+
+.shop-colors {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 12px;
+}
+
+
+.color-swatch {
+    display: block;
+
+    width: 19px;
+    height: 19px;
+
+    border-radius: 50%;
+
+    border: 1px solid #bbbbbb;
+
+    box-sizing: border-box;
+}
+
+
+/* COLORS */
+
+.color-swatch.cream {
+    background: #e9e2d4;
+}
+
+
+.color-swatch.brown {
+    background: #65483b;
+}
+
+
+.color-swatch.black {
+    background: #111111;
+}
+
+
+.color-swatch.maroon {
+    background: #7b1e35;
+}
+
+
+.color-swatch.blue {
+    background: #7fa8c9;
+}
+
+
+.color-swatch.white {
+    background: #ffffff;
+}
+
+
+.color-swatch.pink {
+    background: #e5aebe;
+}
+
+
+.color-swatch.gray {
+    background: #8e8e8e;
+}
+
+
+.color-swatch.yellow {
+    background: #dfcf76;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    width: 100%;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #222222;
+
+    color: #ffffff;
+}
+
+
+.footer h2 {
+    margin: 0 0 10px;
+}
+
+
+.footer p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .shop-product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+
+        padding: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .shop-top {
+        padding: 15px;
+    }
+
+
+    .shop-categories {
+        justify-content: flex-start;
+
+        gap: 20px;
+
+        padding: 20px 15px;
+
+        overflow-x: auto;
+    }
+
+
+    .shop-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+
+        padding: 15px;
+    }
+
+
+    .shop-image-box {
+        height: 220px;
+    }
+
+
+    .shop-name-row h3 {
+        font-size: 14px;
+    }
+
+
+    .shop-price {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .shop-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        padding: 10px;
+    }
+
+
+    .shop-image-box {
+        height: 190px;
+    }
+
+
+    .shop-product-info {
+        padding: 10px;
+    }
+
+
+    .shop-name-row h3 {
+        font-size: 13px;
+    }
+
+
+    .heart-button {
+        font-size: 18px;
+    }
+
+
+    .color-swatch {
+        width: 16px;
+        height: 16px;
+    }
+
+}
+
+
+
+/* =========================================
+   FULL WIDTH BAGS BANNER (CATOGERIES)
+   ========================================= */
+
+.bags-banner {
+    width: 100%;
+
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Banner image */
+
+.bags-banner img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* Dark/light overlay */
+
+.bags-banner::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.08);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BANNER TEXT
+   ========================================= */
+
+.banner-content {
+    position: absolute;
+
+    left: 6%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    color: white;
+}
+
+
+/* Bags heading */
+
+.banner-content h1 {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 80px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    margin-bottom: 55px;
+}
+
+
+/* New In link */
+
+.banner-content a {
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 35px;
+
+    font-weight: normal;
+}
+
+
+.banner-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   CATEGORIES SECTION
+   ========================================= */
+
+.categories {
+    width: 100%;
+
+    padding: 100px 7% 100px;
+
+    background-color: #faf9f6;
+}
+
+
+/* Categories heading */
+
+.categories-header {
+    margin-bottom: 55px;
+}
+
+
+/* Small collection text */
+
+.categories-header p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #777777;
+
+    margin-bottom: 15px;
+}
+
+
+/* Categories heading */
+
+.categories-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 55px;
+
+    font-weight: normal;
+
+    color: #111111;
+}
+
+
+/* =========================================
+   FOUR CATEGORY GRID
+   ========================================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   CATEGORY CARD
+   ========================================= */
+
+.category-card {
+    width: 100%;
+}
+
+
+/* Category image */
+
+.category-card figure {
+    width: 100%;
+
+    height: 380px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    background-color: #eeeae2;
+}
+
+
+/* Category image */
+
+.category-card figure img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* Image hover */
+
+.category-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   CATEGORY INFORMATION
+   ========================================= */
+
+.category-info {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 18px;
+}
+
+
+/* Category name */
+
+.category-info h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    color: #111111;
+}
+
+
+/* Shop link */
+
+.category-info a {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+
+    color: #666666;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #999999;
+
+    padding-bottom: 3px;
+}
+
+
+.category-info a:hover {
+    color: #111111;
+
+    border-color: #111111;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .bags-banner {
+        height: 500px;
+    }
+
+
+    .banner-content h1 {
+        font-size: 65px;
+    }
+
+
+    .banner-content a {
+        font-size: 28px;
+    }
+
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .category-card figure {
+        height: 350px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .bags-banner {
+        height: 400px;
+    }
+
+
+    .banner-content {
+        left: 8%;
+    }
+
+
+    .banner-content h1 {
+        font-size: 50px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .banner-content a {
+        font-size: 22px;
+    }
+
+
+    .categories {
+        padding: 65px 25px;
+    }
+
+
+    .categories-header h2 {
+        font-size: 42px;
+    }
+
+
+    .category-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .category-card figure {
+        height: 400px;
+    }
+}
+
+.product-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+

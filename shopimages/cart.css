@@ -1,0 +1,348 @@
+
+/* ==================================
+   AURELLE SHOPPING CART
+================================== */
+
+.cart-page {
+    min-height: 80vh;
+    padding: 35px 7% 80px;
+    background: #f8f6f2;
+    color: #211f1b;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.cart-page * {
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 7%;
+    border-bottom: 1px solid #dedbd4;
+    background: #f8f6f2;
+}
+
+.cart-logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    color: #211f1b;
+    text-decoration: none;
+}
+
+.cart-header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.cart-header nav a,
+.cart-nav-link {
+    font-size: 13px;
+    color: #211f1b;
+    text-decoration: none;
+}
+
+.cart-header nav a:hover,
+.cart-nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Page heading */
+
+.back-shop {
+    display: inline-block;
+    margin-bottom: 35px;
+    color: #77736c;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.back-shop:hover {
+    color: #211f1b;
+}
+
+.cart-heading {
+    margin-bottom: 40px;
+}
+
+.cart-label {
+    color: #77736c;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.cart-heading h1 {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    font-size: 44px;
+}
+
+.cart-heading > p:last-child {
+    color: #77736c;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Main layout */
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.8fr);
+    gap: 45px;
+    align-items: start;
+}
+
+/* Cart products */
+
+.cart-items {
+    border-top: 1px solid #dedbd4;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 155px minmax(0, 1fr);
+    gap: 25px;
+    padding: 25px 0;
+    border-bottom: 1px solid #dedbd4;
+}
+
+.cart-product-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: #eae6de;
+    overflow: hidden;
+}
+
+.cart-product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cart-product-image:hover img {
+    transform: scale(1.03);
+}
+
+.cart-product-info h2 {
+    margin: 0 0 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.cart-product-info h2 a {
+    color: #211f1b;
+    text-decoration: none;
+}
+
+.cart-product-info h2 a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.cart-meta {
+    margin: 9px 0;
+    color: #77736c;
+    font-size: 13px;
+}
+
+.cart-price {
+    margin-top: 18px;
+    font-size: 18px;
+    color: #211f1b;
+}
+
+/* Order summary */
+
+.cart-summary {
+    padding: 25px;
+    background: #fffefa;
+    border: 1px solid #dedbd4;
+}
+
+.cart-summary h2 {
+    margin: 0 0 25px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.summary-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 20px 0;
+    color: #66615a;
+    font-size: 13px;
+}
+
+.summary-total {
+    padding-top: 20px;
+    border-top: 1px solid #dedbd4;
+    color: #211f1b;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.summary-note {
+    margin: 15px 0 22px;
+    color: #77736c;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+
+.cart-button {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    border: 1px solid #211f1b;
+    border-radius: 0;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.25s ease,
+                color 0.25s ease;
+}
+
+.checkout-button {
+    background: #211f1b;
+    color: #f8f6f2;
+}
+
+.checkout-button:hover {
+    background: #49443c;
+}
+
+.continue-button {
+    margin-top: 12px;
+    background: transparent;
+    color: #211f1b;
+}
+
+.continue-button:hover {
+    background: #eae6de;
+}
+
+.cart-footer-note {
+    margin: 22px 0 0;
+    color: #77736c;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Footer */
+
+.cart-footer {
+    padding: 30px 7%;
+    border-top: 1px solid #dedbd4;
+    background: #f8f6f2;
+    text-align: center;
+}
+
+.cart-footer a {
+    color: #211f1b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.cart-footer p {
+    color: #77736c;
+    font-size: 13px;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+    .cart-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cart-summary {
+        max-width: none;
+    }
+
+    .cart-heading h1 {
+        font-size: 38px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .cart-header {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .cart-logo {
+        font-size: 25px;
+    }
+
+    .cart-header nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        padding-top: 8px;
+    }
+
+    .cart-page {
+        padding: 25px 5% 50px;
+    }
+
+    .cart-heading {
+        margin-bottom: 28px;
+    }
+
+    .cart-heading h1 {
+        font-size: 34px;
+    }
+
+    .cart-item {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .cart-product-info h2 {
+        font-size: 18px;
+    }
+
+    .cart-summary {
+        padding: 22px 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cart-item {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .cart-product-info h2 {
+        font-size: 16px;
+    }
+}

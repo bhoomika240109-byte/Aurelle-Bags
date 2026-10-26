@@ -1,0 +1,165 @@
+
+/* Basic Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f6f2;
+    color: #211f1b;
+}
+
+/* Main Page */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 20px;
+}
+
+/* Logo */
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: #211f1b;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+
+/* Login Box */
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    background: #fcfbf8;
+    border: 1px solid #e3dfd7;
+}
+
+.subtitle {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #77736c;
+    text-align: center;
+}
+
+.login-box h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+    margin: 12px 0;
+}
+
+.description {
+    text-align: center;
+    font-size: 13px;
+    color: #77736c;
+    margin-bottom: 30px;
+}
+
+/* Form */
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.login-box input {
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #d8d2c8;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.login-box input:focus {
+    outline: 1px solid #77736c;
+}
+
+/* Login Button */
+
+.login-box button {
+    padding: 15px;
+    border: 1px solid #211f1b;
+    background: #211f1b;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #eae6de;
+    color: #211f1b;
+}
+
+/* Sign Up Link */
+
+.signup {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 12px;
+    color: #77736c;
+}
+
+.signup a {
+    color: #211f1b;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Back Link */
+
+.back-link {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    color: #77736c;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #211f1b;
+}
+
+/* Footer */
+
+footer {
+    margin-top: auto;
+    padding-top: 40px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #77736c;
+    text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    .login-page {
+        padding: 25px 16px;
+    }
+
+    .logo {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .login-box {
+        padding: 25px 20px;
+    }
+}
