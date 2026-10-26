@@ -106,21 +106,6 @@ body {
     color: #211f1b;
 }
 
-/* Sign Up Link */
-
-.signup {
-    margin-top: 25px;
-    text-align: center;
-    font-size: 12px;
-    color: #77736c;
-}
-
-.signup a {
-    color: #211f1b;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
 /* Back Link */
 
 .back-link {
