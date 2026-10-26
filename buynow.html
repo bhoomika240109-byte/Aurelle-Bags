@@ -28,7 +28,7 @@
             <p>Complete your details to prepare your order.</p>
         </div>
 
-        <form class="checkout-form">
+        <form class="checkout-form" action="order.html" method="GET">
 
             <!-- Contact Information -->
             <section class="checkout-section">
@@ -52,7 +52,7 @@
                     <label for="email">Email Address (Optional)</label>
                     <input type="email" id="email" name="email"
                         placeholder="you@example.com"
-                        autocomplete="email" required>
+                        autocomplete="email">
                 </div>
             </section>
 
@@ -162,9 +162,9 @@
                 </p>
 
                 <!-- Link to order confirmation page -->
-                <a href="order.html" class="place-order">
-                    PLACE ORDER — ₹2,499
-                </a>
+                <button type="submit" class="place-order">
+                   PLACE ORDER — ₹2,499
+                         </button>
 
                 <p class="terms-note">
                     By placing your order, you agree to our store policies.
