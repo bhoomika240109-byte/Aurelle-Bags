@@ -1,1836 +1,739 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-
+body {
     background-color: #f8f7f3;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* Navigation bar */
+img {
+    max-width: 100%;
+}
 
-.navbar{
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 
-    height: 50px;
+/* Navigation */
+
+.navbar {
+    min-height: 60px;
     width: 100%;
     background-color: #ffffff;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 40px;
-
-    
+    padding: 10px 40px;
+    gap: 20px;
 }
 
-/* Aurelle logo*/
-
-.logo{
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.logo {
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 30px;
     font-weight: normal;
-
     color: #222;
     letter-spacing: -2px;
-
-
-
+    text-decoration: none;
+    flex-shrink: 0;
 }
 
-/* Navigation Links*/
-
-nav{
-
+nav {
     display: flex;
     align-items: center;
-    gap: 50px;
-
-
-
+    justify-content: center;
+    gap: 40px;
 }
 
 nav a {
-
     position: relative;
-
     text-decoration: none;
     color: #171717;
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 18px;
     font-weight: normal;
-
     padding: 10px 0;
 }
 
-/* Hover effect*/
-
-nav a:hover{
-
-    color: #555555;
+nav a:hover {
+    color: #777;
 }
 
-/* Underline for active page*/
-
-nav a:active::after{
-
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-
-    width: 100%;
-    height: 2px;
-
-    background-color: #555555;
+nav a:focus-visible {
+    outline: 1px solid #555;
+    outline-offset: 4px;
 }
 
-/* Main container*/
+/* Home Hero */
 
-.hero{
-
+.hero {
     width: 90%;
     max-width: 1160px;
-    min-height: 100vh;
-
+    min-height: 650px;
     margin: 0 auto;
-
     display: flex;
-
     background-color: #faf9f6;
-
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
-
 }
 
-/* Left section*/
-
-.left-section{
-
+.left-section {
     width: 50%;
-
-    padding-top: 80px;
-    padding-left: 95px;
-
+    padding: 80px 35px 40px 7%;
     position: relative;
 }
 
-/*Aurelle heading*/
-
-.left-section h1{
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 76px;
+.left-section h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: clamp(48px, 5.3vw, 76px);
     font-weight: normal;
-
     color: #111;
-
     line-height: 1;
 }
 
-/* Small description*/
-
-.subtitle{
-
+.subtitle {
     margin-top: 28px;
-
     font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 23px;
+    font-size: clamp(16px, 1.7vw, 23px);
     font-weight: normal;
-
     color: #888;
-
     letter-spacing: 0.2px;
 }
 
-/* Small image*/
-
-.small-image{
-
-    width: 325px;
+.small-image {
+    width: min(100%, 325px);
     height: 285px;
-
-    margin-top: 115px;
+    margin-top: 80px;
+    overflow: hidden;
 }
 
-/* Small image itself*/
-
-.small-image img{
-
+.small-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
-    
 }
 
-/* Right section*/
-
-.right-section{
-
+.right-section {
     width: 50%;
+    min-width: 0;
 }
 
-/* Main image*/
-
-.main-image{
-
-    width: 100%;
-    height: 620px;
-
-    margin: 0;
-}
-
-/* Main image itself*/
-
-.main-image img{
-
+.main-image {
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    margin-top: 30px;
-
-    
+    min-height: 620px;
+    margin: 0;
+    overflow: hidden;
 }
 
-/* BESTSELLERS SECTION */
-
-.bestsellers{
-
+.main-image img {
     width: 100%;
+    height: 100%;
+    min-height: 620px;
+    object-fit: cover;
+    display: block;
+}
 
-    padding: 95px 75px 70px;
+/* Bestsellers */
 
+.bestsellers {
+    width: 100%;
+    padding: 85px 6% 65px;
     background-color: #faf9f6;
 }
 
-/* Heading + see all*/
-
-.bestsellers-header{
-
+.bestsellers-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    margin-bottom: 50px;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
-/* Bestsellears heading*/
-.bestsellers-header h2{
-
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 45px;
+.bestsellers-header h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: clamp(32px, 4vw, 45px);
     font-weight: normal;
-
     color: #111;
-
-    margin: 0;
 }
 
-/* See all link */
-
-.see-all{
-
+.see-all {
     color: #777;
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
-
     text-decoration: none;
-
     border-bottom: 1px solid #999;
-
     padding-bottom: 3px;
+    white-space: nowrap;
 }
 
-/* See all hover */
-
-.see-all:hover{
-
+.see-all:hover {
     color: #111;
-
     border-color: #111;
 }
 
-/* PRODUCT LIST*/
-
-.product-list{
-
+.product-list {
     list-style: none;
-
     display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
-
     margin: 0;
     padding: 0;
 }
 
-/* Individual product*/
-
-.product{
-
+.product {
     width: 100%;
-
+    min-width: 0;
 }
 
-/* Product image box */
-
-.product-image{
-
+.product-image {
     width: 100%;
-    height: 215px;
-
+    height: 250px;
     margin: 0;
-
     background-color: #f1eee7;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     overflow: hidden;
 }
 
-/* Product image*/
-
-.product-image img{
-
+.product-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     display: block;
 }
 
-/* Product information*/
-
-.product-info{
-
+.product-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
+    align-items: flex-start;
+    gap: 10px;
     padding-top: 12px;
 }
 
-/* Product name*/
-
-.product-name{
-
+.product-name {
     margin: 0;
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
-
     color: #666;
-
     letter-spacing: 0.3px;
 }
 
-/* Product price */
-
-.price{
-
+.price {
     margin: 0;
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
-
     color: #777;
+    white-space: nowrap;
 }
 
-/* Bold price*/
-
-.price strong{
-
+.price strong {
     font-weight: normal;
 }
 
-/* BOTTOM LINE*/
-
-.bestsellers::after{
-
+.bestsellers::after {
     content: "";
-
     display: block;
-
     width: 100%;
     height: 1px;
-
     background-color: #777;
-
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
-/* RESPONSIVE DESING*/
+/* Footer */
 
-@media (max-width:900px){
-
-    .bestsellers{
-
-        padding: 70px 40px 50px;
-    }
-
-    .product-list{
-
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px){
-
-    .bestsellers{
-
-        padding: 50px 25px 40px;
-    }
-
-    .bestsellers-header h2{
-
-        font-size: 35px;
-    }
-
-    .product-list{
-
-        grid-template-columns: 1fr;
-    }
-}
-
-/* FOOTER */
-
-.footer{
-
+.footer {
     width: 100%;
-
     background-color: #211f1b;
-
     color: #f5f2eb;
-
     text-align: center;
-
     padding: 35px 20px 40px;
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* Aurelle logo */
-
-.footer h2{
-
+.footer h2 {
     margin: 0 0 25px;
-
     font-size: 38px;
-
     font-weight: normal;
-
     letter-spacing: 0.5px;
 }
 
-/* Copyright */
-
-.footer p{
-
+.footer p {
     margin: 0;
-
     padding-top: 20px;
-
     border-top: 1px solid #44413c;
-
     display: inline-block;
-
-    min-width: 430px;
-
+    width: min(100%, 430px);
     font-size: 15px;
-
+    line-height: 1.7;
     color: #ddd8cf;
 }
 
-/* OUR STORY SECTION */
+/* Our Story */
 
-.story{
-
+.story {
     width: 100%;
-
     min-height: 585px;
-
     display: grid;
-
-    grid-template-columns: 50% 50%;
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     background-color: #faf9f6;
 }
 
-/* Left side */
-
-.story-content{
-
+.story-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    padding-left: 90px;
-    padding-right: 90px;
+    padding: 65px clamp(25px, 6vw, 90px);
 }
 
-/* ABOUT US small heading */
-
-.small-heading{
-
+.small-heading {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
-
     letter-spacing: 4px;
-
-    color: #666666;
-
-    margin-bottom: 12px;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-/* Our story heading */
-
-.story-content h1{
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-    font-size: 72px;
+.story-content h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: clamp(45px, 5.3vw, 72px);
     font-weight: normal;
     line-height: 1.05;
-
-    margin-bottom: 38px;
-
-    color: #111111;
+    margin-bottom: 30px;
+    color: #111;
 }
 
-/* Story paragraph */
-
-.story-text{
-
+.story-text {
     max-width: 440px;
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 20px;
-
     line-height: 1.65;
-
-    color: #555555;
+    color: #555;
 }
 
-/* STORY IMAGE */
-
-.story-image{
-
+.story-image {
     width: 100%;
     height: 530px;
-
     margin: 0;
-
     overflow: hidden;
 }
 
-.story-image img{
-
+.story-image img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
 }
 
-/* OUR VALUES SECTION */
+/* Our Values */
 
-.values{
-
+.values {
     width: 100%;
-
     min-height: 570px;
-
     display: grid;
-
-    grid-template-columns: 50% 50%;
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
-
-    padding: 80px 90px;
-
-    gap: 80px;
-
+    padding: 75px 7%;
+    gap: 60px;
     background-color: #faf9f6;
-
 }
 
-/* Values image */
-
-.values-image{
-
+.values-image {
     width: 100%;
     height: 430px;
-
     margin: 0;
-
     overflow: hidden;
 }
 
-.values-image img{
-
+.values-image img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
-
 }
 
-/* VALUES TEXT */
-
-
-.values-content{
-
+.values-content {
     padding-left: 0;
-
     max-width: 470px;
 }
 
-/* Our Values heading */
-
-.values-content h2{
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-    font-size: 50px;
+.values-content h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: clamp(36px, 4vw, 50px);
     font-weight: normal;
-
     line-height: 1.1;
-
-    margin-bottom: 32px;
-
-    color: #111111;
-
+    margin-bottom: 28px;
+    color: #111;
 }
 
-/* Values paragraph */
-
-.values-content p{
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
+.values-content p {
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 20px;
-
     line-height: 1.65;
-
-    color: #555555;
-
-    margin-bottom: 35px;
+    color: #555;
+    margin-bottom: 30px;
 }
 
-/* Small line below paragraph */
-
-.values-content hr{
-
+.values-content hr {
     width: 45px;
     height: 2px;
-
     border: none;
-
-    background-color: #777777;
-
+    background-color: #777;
     margin: 0;
 }
 
-/* RESPONSIVE DESING */
-
-@media (max-width:900px){
-
-    .story{
-
-        grid-template-columns: 1fr;
-    }
-
-    .story-content{
-
-        padding: 70px 50px;
-    }
-
-    .story-image{
-
-        height: 500px;
-    }
-
-    .values{
-
-        grid-template-columns: 1fr;
-
-        padding: 60px 50px;
-
-        gap: 50px;
-    }
-
-    .values-image{
-
-        height: 450px;
-    }
-}
-
-@media (max-width: 600px){
-
-    .story-content{
-
-        padding: 60px 25px;
-    }
-
-    .story-content h1{
-
-        font-size: 52px;
-    }
-
-    .story-text{
-
-        font-size: 18px;
-    }
-
-    .story-image{
-
-        height: 400px;
-    }
-
-    .values{
-
-        padding: 50px 25px;
-    }
-
-    .values-content h2{
-
-        font-size: 42px;
-    }
-
-    .values-content p{
-
-        font-size: 18px;
-    }
-
-    .values-image{
-
-        height: 350px;
-    }
-}
-
-/* =========================================
-   CONTACT PAGE
-   ========================================= */
+/* Contact Page */
 
 .contact-section {
     width: 100%;
     min-height: calc(100vh - 100px);
-
     display: grid;
-    grid-template-columns: 50% 50%;
-
-    padding: 80px 90px 100px;
-    gap: 90px;
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 70px 7% 90px;
+    gap: 70px;
     background-color: #faf9f6;
 }
 
-
-/* =========================================
-   LEFT SIDE
-   ========================================= */
-
 .contact-info {
-    padding-top: 55px;
+    padding-top: 35px;
 }
-
-
-/* Small heading */
-
-.small-heading {
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 13px;
-    letter-spacing: 4px;
-
-    color: #666666;
-
-    margin-bottom: 15px;
-}
-
-
-/* Contact Us heading */
 
 .contact-info h1 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 72px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: clamp(45px, 5.3vw, 72px);
     font-weight: normal;
-
     line-height: 1.05;
-
-    color: #111111;
-
-    margin-bottom: 35px;
+    color: #111;
+    margin-bottom: 30px;
 }
-
-
-/* Introduction text */
 
 .intro {
     max-width: 460px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 20px;
     line-height: 1.65;
-
-    color: #555555;
-
-    margin-bottom: 45px;
+    color: #555;
+    margin-bottom: 40px;
 }
-
-
-/* Contact details */
 
 address {
     font-style: normal;
 }
 
-
 address p {
-    font-family: Georgia, "Times New Roman", serif;
-
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 17px;
     line-height: 1.6;
-
-    color: #555555;
-
-    margin-bottom: 25px;
+    color: #555;
+    margin-bottom: 22px;
+    overflow-wrap: anywhere;
 }
-
 
 address strong {
     font-weight: normal;
-    color: #111111;
+    color: #111;
 }
-
-
-/* =========================================
-   CONTACT FORM
-   ========================================= */
 
 .contact-form-section {
-    padding-top: 45px;
+    padding-top: 35px;
 }
 
-
-form {
+.contact-form-section form {
     width: 100%;
     max-width: 520px;
 }
 
-
-/* Each form field */
-
-.form-group {
-    margin-bottom: 28px;
+.contact-form-section .form-group {
+    margin-bottom: 25px;
 }
 
-
-/* Labels */
-
-label {
+.contact-form-section label {
     display: block;
-
     font-family: Arial, Helvetica, sans-serif;
-
     font-size: 12px;
     letter-spacing: 1px;
-
-    color: #555555;
-
+    color: #555;
     margin-bottom: 10px;
 }
 
-
-/* Input and textarea */
-
-input,
-textarea {
+.contact-form-section input,
+.contact-form-section textarea {
     width: 100%;
-
     padding: 14px 5px;
-
     border: none;
-    border-bottom: 1px solid #999999;
-
+    border-bottom: 1px solid #999;
+    border-radius: 0;
     background-color: transparent;
-
     outline: none;
-
-    font-family: Georgia, "Times New Roman", serif;
-
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 17px;
-
-    color: #222222;
+    color: #222;
 }
 
-
-/* Message box */
-
-textarea {
+.contact-form-section textarea {
     resize: vertical;
     min-height: 130px;
 }
 
-
-/* Placeholder */
-
-input::placeholder,
-textarea::placeholder {
-    color: #999999;
+.contact-form-section input::placeholder,
+.contact-form-section textarea::placeholder {
+    color: #999;
 }
 
-
-/* When user clicks inside */
-
-input:focus,
-textarea:focus {
-    border-bottom: 1px solid #222222;
+.contact-form-section input:focus,
+.contact-form-section textarea:focus {
+    border-bottom: 1px solid #222;
 }
 
-
-/* =========================================
-   SEND BUTTON
-   ========================================= */
-
-button {
+.contact-form-section button {
     margin-top: 10px;
-
     padding: 15px 30px;
-
-    border: 1px solid #222222;
-
-    background-color: #222222;
-
-    color: #ffffff;
-
+    border: 1px solid #222;
+    background-color: #222;
+    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-
     font-size: 11px;
     letter-spacing: 1px;
-
     cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-
-button:hover {
+.contact-form-section button:hover {
     background-color: transparent;
-    color: #222222;
+    color: #222;
 }
 
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-@media (max-width: 900px) {
-
-    .contact-section {
-        grid-template-columns: 1fr;
-
-        padding: 60px 50px 80px;
-
-        gap: 40px;
-    }
-
-    .contact-info {
-        padding-top: 20px;
-    }
-
-    .contact-form-section {
-        padding-top: 0;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .contact-section {
-        padding: 50px 25px;
-    }
-
-    .contact-info h1 {
-        font-size: 52px;
-    }
-
-    .intro {
-        font-size: 18px;
-    }
-}
-
-/* =========================================================
-   AURELLE SHOP PAGE
-   ========================================================= */
-
-
-/* RESET ONLY FOR SHOP */
+/* Shop Page */
 
 .shop-page,
 .shop-page * {
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   SHOP PAGE
-   ========================================================= */
-
 .shop-page {
     width: 100%;
     min-height: 100vh;
-
     background: #f8f6f2;
-
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-/* =========================================================
-   SHOP TOP
-   ========================================================= */
 
 .shop-top {
     width: 100%;
-
     display: flex;
     align-items: center;
-
     gap: 15px;
-
     padding: 20px 40px;
-
-    background: #ffffff;
+    background: #fff;
 }
 
-
-/* Back button */
-
 .back-button {
+    flex-shrink: 0;
     width: 45px;
     height: 45px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border: none;
     border-radius: 50%;
-
-    background: #222222;
-    color: #ffffff;
-
+    background: #222;
+    color: #fff;
     font-size: 28px;
-
     cursor: pointer;
 }
-
-
-/* Search */
 
 .search-box {
     height: 48px;
-
+    min-width: 0;
     flex: 1;
-
     display: flex;
     align-items: center;
-
     padding: 0 18px;
-
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     border-radius: 25px;
-
-    background: #ffffff;
+    background: #fff;
 }
-
 
 .search-box input {
     width: 100%;
+    min-width: 0;
     height: 100%;
-
+    padding: 0;
     border: none;
     outline: none;
-
     background: transparent;
-
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
-
 .camera-icon {
+    flex-shrink: 0;
     font-size: 20px;
-
     margin-left: 10px;
 }
 
-.cartshop-link{
-
+.cartshop-link {
+    flex-shrink: 0;
     text-decoration: none;
-    
-
-    
-     
 }
 
-
-
-/* =========================================================PRODUCT GRID ========================================================= */
-
-/*THIS IS WHAT GIVES YOU 4 BAGS IN ONE ROW.*/
+/* Shop Product Grid */
 
 .shop-product-grid {
-    
     width: 100%;
-    display: grid !important;
-
-    grid-template-columns: repeat(4,minmax(0,1fr)) !important;
-
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
-
     padding: 25px 40px;
-
-    box-sizing: border-box;
-
 }
-
-
-/* =========================================================PRODUCT CARD========================================================= */
 
 .shop-product-card {
     width: 100%;
-
     min-width: 0;
-
     overflow: hidden;
-
-    background: #ffffff;
-
+    background: #fff;
     border-radius: 10px;
-
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .shop-product-card:hover {
-    transform: translateY(-5px);
-
+    transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-
-/* =========================================================
-   IMAGE
-   ========================================================= */
-
 .shop-image-box {
     position: relative;
-
     width: 100%;
-
     height: 300px;
-
     overflow: hidden;
-
     background: #f4f1ec;
 }
 
-
 .shop-image-box img {
     display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     object-position: center;
 }
 
-
-/* =========================================================
-   BAG BUTTON
-   ========================================================= */
-
 .bag-button {
     position: absolute;
-
     right: 12px;
     bottom: 12px;
-
     width: 42px;
     height: 42px;
-
     margin: 0;
     padding: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border: none;
     border-radius: 50%;
-
-    background: #ffffff;
-    color: #222222;
-
+    background: #fff;
+    color: #222;
     font-size: 19px;
-
     cursor: pointer;
-
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-
-/* =========================================================
-   PRODUCT INFORMATION
-   ========================================================= */
-
 .shop-product-info {
     width: 100%;
-
     padding: 15px;
 }
 
-
-/* Product name and heart */
-
 .shop-name-row {
     width: 100%;
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 10px;
 }
 
-
 .shop-name-row h3 {
     margin: 0;
-
     flex: 1;
-
     font-family: Arial, Helvetica, sans-serif;
-
     font-size: 16px;
-
     font-weight: 500;
-
     line-height: 1.4;
-
-    color: #222222;
+    color: #222;
+    overflow-wrap: anywhere;
 }
-
 
 .heart-button {
     flex-shrink: 0;
-
     border: none;
-
     background: transparent;
-
     padding: 0;
-
+    color: #222;
     font-size: 22px;
-
     cursor: pointer;
 }
 
-
-/* =========================================================
-   PRICE
-   ========================================================= */
-
 .shop-price {
     margin: 10px 0 0;
-
     font-size: 17px;
-
     font-weight: bold;
-
-    color: #222222;
+    color: #222;
 }
-
-
-/* =========================================================
-   COLOR OPTIONS
-   ========================================================= */
 
 .shop-colors {
     display: flex;
-
     align-items: center;
-
+    flex-wrap: wrap;
     gap: 9px;
-
     margin-top: 12px;
 }
 
-
 .color-swatch {
     display: block;
-
     width: 19px;
     height: 19px;
-
     border-radius: 50%;
-
-    border: 1px solid #bbbbbb;
-
+    border: 1px solid #bbb;
     box-sizing: border-box;
 }
-
-
-/* COLORS */
 
 .color-swatch.cream {
     background: #e9e2d4;
 }
 
-
 .color-swatch.brown {
     background: #65483b;
 }
 
-
 .color-swatch.black {
-    background: #111111;
+    background: #111;
 }
-
 
 .color-swatch.maroon {
     background: #7b1e35;
 }
 
-
 .color-swatch.blue {
     background: #7fa8c9;
 }
 
-
 .color-swatch.white {
-    background: #ffffff;
+    background: #fff;
 }
-
 
 .color-swatch.pink {
     background: #e5aebe;
 }
 
-
 .color-swatch.gray {
     background: #8e8e8e;
 }
 
-
 .color-swatch.yellow {
     background: #dfcf76;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer {
-    width: 100%;
-
-    padding: 40px;
-
-    text-align: center;
-
-    background: #222222;
-
-    color: #ffffff;
-}
-
-
-.footer h2 {
-    margin: 0 0 10px;
-}
-
-
-.footer p {
-    margin: 0;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 1000px) {
-
-    .shop-product-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-
-        padding: 30px;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .shop-top {
-        padding: 15px;
-    }
-
-
-    .shop-categories {
-        justify-content: flex-start;
-
-        gap: 20px;
-
-        padding: 20px 15px;
-
-        overflow-x: auto;
-    }
-
-
-    .shop-product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 12px;
-
-        padding: 15px;
-    }
-
-
-    .shop-image-box {
-        height: 220px;
-    }
-
-
-    .shop-name-row h3 {
-        font-size: 14px;
-    }
-
-
-    .shop-price {
-        font-size: 15px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 450px) {
-
-    .shop-product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 10px;
-
-        padding: 10px;
-    }
-
-
-    .shop-image-box {
-        height: 190px;
-    }
-
-
-    .shop-product-info {
-        padding: 10px;
-    }
-
-
-    .shop-name-row h3 {
-        font-size: 13px;
-    }
-
-
-    .heart-button {
-        font-size: 18px;
-    }
-
-
-    .color-swatch {
-        width: 16px;
-        height: 16px;
-    }
-
-}
-
-
-
-/* =========================================
-   FULL WIDTH BAGS BANNER (CATOGERIES)
-   ========================================= */
-
-.bags-banner {
-    width: 100%;
-
-    height: 500px;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-
-/* Banner image */
-
-.bags-banner img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-}
-
-
-/* Dark/light overlay */
-
-.bags-banner::after {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.08);
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   BANNER TEXT
-   ========================================= */
-
-.banner-content {
-    position: absolute;
-
-    left: 6%;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    z-index: 2;
-
-    color: white;
-}
-
-
-/* Bags heading */
-
-.banner-content h1 {
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 80px;
-
-    font-weight: bold;
-
-    line-height: 1;
-
-    margin-bottom: 55px;
-}
-
-
-/* New In link */
-
-.banner-content a {
-    color: white;
-
-    text-decoration: none;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 35px;
-
-    font-weight: normal;
-}
-
-
-.banner-content a:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================================
-   CATEGORIES SECTION
-   ========================================= */
-
-.categories {
-    width: 100%;
-
-    padding: 100px 7% 100px;
-
-    background-color: #faf9f6;
-}
-
-
-/* Categories heading */
-
-.categories-header {
-    margin-bottom: 55px;
-}
-
-
-/* Small collection text */
-
-.categories-header p {
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 12px;
-
-    letter-spacing: 4px;
-
-    color: #777777;
-
-    margin-bottom: 15px;
-}
-
-
-/* Categories heading */
-
-.categories-header h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 55px;
-
-    font-weight: normal;
-
-    color: #111111;
-}
-
-
-/* =========================================
-   FOUR CATEGORY GRID
-   ========================================= */
-
-.category-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 25px;
-
-    width: 100%;
-}
-
-
-/* =========================================
-   CATEGORY CARD
-   ========================================= */
-
-.category-card {
-    width: 100%;
-}
-
-
-/* Category image */
-
-.category-card figure {
-    width: 100%;
-
-    height: 380px;
-
-    margin: 0;
-
-    overflow: hidden;
-
-    background-color: #eeeae2;
-}
-
-
-/* Category image */
-
-.category-card figure img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition: transform 0.5s ease;
-}
-
-
-/* Image hover */
-
-.category-card:hover img {
-    transform: scale(1.04);
-}
-
-
-/* =========================================
-   CATEGORY INFORMATION
-   ========================================= */
-
-.category-info {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    padding-top: 18px;
-}
-
-
-/* Category name */
-
-.category-info h3 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 25px;
-
-    font-weight: normal;
-
-    color: #111111;
-}
-
-
-/* Shop link */
-
-.category-info a {
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 11px;
-
-    color: #666666;
-
-    text-decoration: none;
-
-    border-bottom: 1px solid #999999;
-
-    padding-bottom: 3px;
-}
-
-
-.category-info a:hover {
-    color: #111111;
-
-    border-color: #111111;
-}
-
-
-/* =========================================
-   RESPONSIVE DESIGN
-   ========================================= */
-
-@media (max-width: 1000px) {
-
-    .bags-banner {
-        height: 500px;
-    }
-
-
-    .banner-content h1 {
-        font-size: 65px;
-    }
-
-
-    .banner-content a {
-        font-size: 28px;
-    }
-
-
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-    .category-card figure {
-        height: 350px;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .bags-banner {
-        height: 400px;
-    }
-
-
-    .banner-content {
-        left: 8%;
-    }
-
-
-    .banner-content h1 {
-        font-size: 50px;
-
-        margin-bottom: 30px;
-    }
-
-
-    .banner-content a {
-        font-size: 22px;
-    }
-
-
-    .categories {
-        padding: 65px 25px;
-    }
-
-
-    .categories-header h2 {
-        font-size: 42px;
-    }
-
-
-    .category-grid {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-
-    .category-card figure {
-        height: 400px;
-    }
 }
 
 .product-link {
@@ -1839,3 +742,708 @@ button:hover {
     text-decoration: none;
 }
 
+/* Bags Banner */
+
+.bags-banner {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bags-banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.bags-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+}
+
+.banner-content {
+    position: absolute;
+    left: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #fff;
+}
+
+.banner-content h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(45px, 6vw, 80px);
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.banner-content a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(22px, 3vw, 35px);
+    font-weight: normal;
+}
+
+.banner-content a:hover {
+    text-decoration: underline;
+}
+
+/* Categories */
+
+.categories {
+    width: 100%;
+    padding: 85px 7%;
+    background-color: #faf9f6;
+}
+
+.categories-header {
+    margin-bottom: 45px;
+}
+
+.categories-header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    line-height: 1.6;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.categories-header h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: clamp(36px, 4.5vw, 55px);
+    font-weight: normal;
+    color: #111;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.category-card {
+    width: 100%;
+    min-width: 0;
+}
+
+.category-card figure {
+    width: 100%;
+    height: 380px;
+    margin: 0;
+    overflow: hidden;
+    background-color: #eeeae2;
+}
+
+.category-card figure img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover figure img {
+    transform: scale(1.04);
+}
+
+.category-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 18px;
+}
+
+.category-info h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: normal;
+    color: #111;
+}
+
+.category-info a {
+    flex-shrink: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+    padding-bottom: 3px;
+}
+
+.category-info a:hover {
+    color: #111;
+    border-color: #111;
+}
+
+/* Tablet Layout */
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 12px 25px;
+    }
+
+    nav {
+        gap: 22px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .hero {
+        width: 94%;
+        min-height: 550px;
+    }
+
+    .left-section {
+        padding: 65px 25px 35px 6%;
+    }
+
+    .small-image {
+        height: 230px;
+        margin-top: 75px;
+    }
+
+    .main-image,
+    .main-image img {
+        min-height: 550px;
+    }
+
+    .bestsellers {
+        padding: 70px 35px 50px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .product-image {
+        height: 280px;
+    }
+
+    .story-content {
+        padding: 55px 35px;
+    }
+
+    .story-image {
+        height: 470px;
+    }
+
+    .values {
+        padding: 60px 40px;
+        gap: 35px;
+    }
+
+    .values-image {
+        height: 380px;
+    }
+
+    .contact-section {
+        padding: 60px 40px 75px;
+        gap: 40px;
+    }
+
+    .shop-top {
+        padding: 20px 25px;
+    }
+
+    .shop-product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 25px;
+        gap: 18px;
+    }
+
+    .shop-image-box {
+        height: 270px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .category-card figure {
+        height: 350px;
+    }
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+    .navbar {
+        min-height: auto;
+        padding: 15px 18px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .navbar .logo {
+        font-size: 25px;
+    }
+
+    nav {
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .hero {
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+    .left-section {
+        width: 100%;
+        padding: 45px 25px 30px;
+    }
+
+    .left-section h1 {
+        font-size: clamp(48px, 12vw, 65px);
+    }
+
+    .subtitle {
+        font-size: 17px;
+        margin-top: 18px;
+        line-height: 1.5;
+    }
+
+    .small-image {
+        width: 65%;
+        max-width: 280px;
+        height: 200px;
+        margin-top: 30px;
+    }
+
+    .right-section {
+        width: 100%;
+    }
+
+    .main-image {
+        height: 390px;
+        min-height: 0;
+    }
+
+    .main-image img {
+        height: 100%;
+        min-height: 0;
+        margin-top: 0;
+    }
+
+    .bestsellers {
+        padding: 50px 20px 35px;
+    }
+
+    .bestsellers-header {
+        margin-bottom: 28px;
+        gap: 12px;
+    }
+
+    .bestsellers-header h2 {
+        font-size: 32px;
+    }
+
+    .see-all {
+        font-size: 10px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+    }
+
+    .product-image {
+        height: 190px;
+    }
+
+    .product-info {
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .product-name,
+    .price {
+        font-size: 10px;
+    }
+
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .footer p {
+        font-size: 12px;
+        padding-top: 16px;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+    }
+
+    .story-content {
+        padding: 50px 25px;
+    }
+
+    .story-content h1 {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+
+    .story-text {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .story-image {
+        height: 340px;
+    }
+
+    .values {
+        grid-template-columns: 1fr;
+        padding: 45px 25px;
+        gap: 30px;
+    }
+
+    .values-image {
+        height: 320px;
+    }
+
+    .values-content h2 {
+        font-size: 38px;
+        margin-bottom: 22px;
+    }
+
+    .values-content p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 45px 25px 55px;
+        gap: 25px;
+    }
+
+    .contact-info {
+        padding-top: 0;
+    }
+
+    .contact-info h1 {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+
+    .intro {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    address p {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+
+    .contact-form-section {
+        padding-top: 10px;
+    }
+
+    .contact-form-section input,
+    .contact-form-section textarea {
+        font-size: 16px;
+    }
+
+    .shop-top {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .back-button {
+        width: 38px;
+        height: 38px;
+        font-size: 23px;
+    }
+
+    .search-box {
+        height: 42px;
+        padding: 0 12px;
+    }
+
+    .search-box input {
+        font-size: 14px;
+    }
+
+    .camera-icon {
+        font-size: 17px;
+        margin-left: 6px;
+    }
+
+    .shop-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 10px;
+        padding: 15px 10px;
+    }
+
+    .shop-product-card {
+        border-radius: 7px;
+    }
+
+    .shop-image-box {
+        height: 210px;
+    }
+
+    .bag-button {
+        width: 35px;
+        height: 35px;
+        right: 8px;
+        bottom: 8px;
+        font-size: 16px;
+    }
+
+    .shop-product-info {
+        padding: 10px;
+    }
+
+    .shop-name-row {
+        gap: 5px;
+    }
+
+    .shop-name-row h3 {
+        font-size: 13px;
+    }
+
+    .heart-button {
+        font-size: 18px;
+    }
+
+    .shop-price {
+        font-size: 14px;
+    }
+
+    .shop-colors {
+        gap: 6px;
+    }
+
+    .color-swatch {
+        width: 16px;
+        height: 16px;
+    }
+
+    .bags-banner {
+        height: 350px;
+    }
+
+    .banner-content {
+        left: 7%;
+        right: 5%;
+    }
+
+    .banner-content h1 {
+        font-size: 45px;
+        margin-bottom: 25px;
+    }
+
+    .banner-content a {
+        font-size: 21px;
+    }
+
+    .categories {
+        padding: 50px 20px;
+    }
+
+    .categories-header {
+        margin-bottom: 30px;
+    }
+
+    .categories-header p {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .categories-header h2 {
+        font-size: 38px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 12px;
+    }
+
+    .category-card figure {
+        height: 230px;
+    }
+
+    .category-info {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 12px;
+    }
+
+    .category-info h3 {
+        font-size: 19px;
+        overflow-wrap: anywhere;
+    }
+
+    .category-info a {
+        font-size: 10px;
+    }
+}
+
+/* Small Mobile Phones */
+
+@media (max-width: 380px) {
+    .navbar {
+        padding: 12px;
+    }
+
+    .navbar .logo {
+        font-size: 23px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .left-section {
+        padding: 35px 18px 25px;
+    }
+
+    .left-section h1 {
+        font-size: 45px;
+    }
+
+    .small-image {
+        width: 75%;
+        height: 170px;
+    }
+
+    .main-image {
+        height: 310px;
+    }
+
+    .bestsellers {
+        padding: 40px 12px 30px;
+    }
+
+    .bestsellers-header h2 {
+        font-size: 28px;
+    }
+
+    .product-list {
+        gap: 18px 9px;
+    }
+
+    .product-image {
+        height: 155px;
+    }
+
+    .story-content,
+    .contact-section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .story-content h1,
+    .contact-info h1 {
+        font-size: 42px;
+    }
+
+    .values {
+        padding: 40px 18px;
+    }
+
+    .values-image {
+        height: 260px;
+    }
+
+    .shop-top {
+        padding: 10px 8px;
+        gap: 7px;
+    }
+
+    .back-button {
+        width: 34px;
+        height: 34px;
+    }
+
+    .search-box {
+        padding: 0 9px;
+    }
+
+    .search-box input {
+        font-size: 12px;
+    }
+
+    .shop-product-grid {
+        padding: 10px 7px;
+        gap: 12px 8px;
+    }
+
+    .shop-image-box {
+        height: 175px;
+    }
+
+    .shop-product-info {
+        padding: 8px;
+    }
+
+    .shop-name-row h3 {
+        font-size: 12px;
+    }
+
+    .shop-price {
+        font-size: 13px;
+    }
+
+    .heart-button {
+        font-size: 16px;
+    }
+
+    .bags-banner {
+        height: 300px;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+    }
+
+    .categories {
+        padding: 40px 12px;
+    }
+
+    .category-card figure {
+        height: 190px;
+    }
+
+    .category-info h3 {
+        font-size: 17px;
+    }
+
+    .footer p {
+        font-size: 11px;
+    }
+}
