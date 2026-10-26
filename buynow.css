@@ -30,7 +30,7 @@ body {
 }
 
 .back-link {
-    color: #555555;
+    color: #555;
     text-decoration: none;
     font-size: 13px;
 }
@@ -56,8 +56,8 @@ body {
 /* Main Container */
 
 .checkout-container {
-    max-width: 850px;
     width: 90%;
+    max-width: 850px;
     margin: 55px auto 80px;
 }
 
@@ -72,10 +72,10 @@ body {
 }
 
 .checkout-heading h1 {
+    margin: 12px 0;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 44px;
     font-weight: normal;
-    margin: 12px 0;
 }
 
 .checkout-heading > p:last-child {
@@ -84,7 +84,7 @@ body {
     line-height: 1.7;
 }
 
-/* Sections */
+/* Checkout Sections */
 
 .checkout-section {
     padding: 30px;
@@ -127,7 +127,7 @@ body {
     padding: 12px 14px;
     border: 1px solid #d8d2c8;
     border-radius: 0;
-    background: #ffffff;
+    background: #fff;
     color: #211f1b;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -158,7 +158,7 @@ body {
     padding: 18px;
     margin-bottom: 12px;
     border: 1px solid #dedbd4;
-    background: #ffffff;
+    background: #fff;
     cursor: pointer;
     transition: background 0.2s ease;
 }
@@ -190,6 +190,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    min-width: 0;
 }
 
 .payment-text strong {
@@ -204,10 +205,10 @@ body {
 }
 
 .payment-note {
+    margin: 18px 0 0;
     font-size: 12px;
     line-height: 1.7;
     color: #77736c;
-    margin: 18px 0 0;
 }
 
 /* Order Summary */
@@ -242,9 +243,9 @@ body {
     color: #77736c;
 }
 
-/* Place Order Link */
+/* Place Order Button */
 
-a.place-order {
+button.place-order {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,34 +253,34 @@ a.place-order {
     min-height: 54px;
     margin-top: 25px;
     padding: 16px 20px;
-    box-sizing: border-box;
-
     border: 1px solid #211f1b;
     border-radius: 0;
-
     background: #211f1b;
-    color: #ffffff;
-
+    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: normal;
     letter-spacing: 1.5px;
     text-align: center;
-    text-decoration: none;
-
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
     transition: background 0.25s ease, color 0.25s ease;
 }
 
-a.place-order:hover {
+button.place-order:hover {
     background: #eae6de;
     color: #211f1b;
-    text-decoration: none;
 }
 
-a.place-order:focus-visible {
+button.place-order:focus-visible {
     outline: 2px solid #77736c;
     outline-offset: 4px;
+}
+
+button.place-order:active {
+    background: #dcd6cb;
+    color: #211f1b;
 }
 
 .terms-note {
@@ -369,5 +370,10 @@ a.place-order:focus-visible {
     .summary-row,
     .summary-total {
         font-size: 12px;
+    }
+
+    button.place-order {
+        min-height: 52px;
+        font-size: 11px;
     }
 }
